@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Portfolio - FabricateVisuals" description="Explore our portfolio of AI-generated content including voice, images, and videos created for clients worldwide.">
+  <Navigation />
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="py-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+          <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+            Our Portfolio
+          </span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          Discover the power of AI through our showcase of successful projects and satisfied clients
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="pb-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <button class="filter-btn active bg-gradient-to-r from-primary-500 to-accent-500 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn bg-dark-800/50 text-gray-300 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-primary-500/20" data-filter="voice">
+            AI Voice
+          </button>
+          <button class="filter-btn bg-dark-800/50 text-gray-300 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-accent-500/20" data-filter="tts">
+            Text-to-Speech
+          </button>
+          <button class="filter-btn bg-dark-800/50 text-gray-300 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-primary-500/20" data-filter="image">
+            Images
+          </button>
+          <button class="filter-btn bg-dark-800/50 text-gray-300 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-accent-500/20" data-filter="video">
+            Videos
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="pb-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+          
+          <!-- Voice Project 1 -->
+          <div class="portfolio-item voice bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl overflow-hidden hover:border-primary-500/50 transition-all duration-500 transform hover:scale-105 group">
+            <div class="aspect-video bg-gradient-to-br from-primary-500/20 to-primary-600/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-primary-400 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm font-medium">AI Voice</span>
+                <span class="text-gray-400 text-sm">Audiobook</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-300">Fantasy Novel Narration</h3>
+              <p class="text-gray-400 mb-4">Created multiple character voices for a 12-hour fantasy audiobook with distinct personalities and accents.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">Duration: 12 hours</span>
+                <button class="text-primary-400 hover:text-primary-300 font-semibold">Listen Sample</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Project 1 -->
+          <div class="portfolio-item image bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl overflow-hidden hover:border-accent-500/50 transition-all duration-500 transform hover:scale-105 group">
+            <div class="aspect-video bg-gradient-to-br from-accent-500/20 to-accent-600/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-accent-400 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+              </svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-accent-500/20 text-accent-300 px-3 py-1 rounded-full text-sm font-medium">AI Image</span>
+                <span class="text-gray-400 text-sm">Marketing</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors duration-300">Product Campaign Visuals</h3>
+              <p class="text-gray-400 mb-4">Generated 50+ unique product images for a tech startup's marketing campaign across social media platforms.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">50 images</span>
+                <button class="text-accent-400 hover:text-accent-300 font-semibold">View Gallery</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Project 1 -->
+          <div class="portfolio-item video bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl overflow-hidden hover:border-primary-500/50 transition-all duration-500 transform hover:scale-105 group">
+            <div class="aspect-video bg-gradient-to-br from-primary-500/20 to-accent-500/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-primary-400 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+              </svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm font-medium">AI Video</span>
+                <span class="text-gray-400 text-sm">Corporate</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-300">Corporate Training Series</h3>
+              <p class="text-gray-400 mb-4">Produced 10 training videos with AI-generated presenters and animations for employee onboarding.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">10 videos</span>
+                <button class="text-primary-400 hover:text-primary-300 font-semibold">Watch Preview</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TTS Project 1 -->
+          <div class="portfolio-item tts bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl overflow-hidden hover:border-accent-500/50 transition-all duration-500 transform hover:scale-105 group">
+            <div class="aspect-video bg-gradient-to-br from-accent-500/20 to-primary-500/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-accent-400 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+              </svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-accent-500/20 text-accent-300 px-3 py-1 rounded-full text-sm font-medium">TTS</span>
+                <span class="text-gray-400 text-sm">E-Learning</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors duration-300">Multilingual Course Content</h3>
+              <p class="text-gray-400 mb-4">Converted educational content into speech in 12 languages for a global online learning platform.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">12 languages</span>
+                <button class="text-accent-400 hover:text-accent-300 font-semibold">Hear Samples</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Voice Project 2 -->
+          <div class="portfolio-item voice bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl overflow-hidden hover:border-primary-500/50 transition-all duration-500 transform hover:scale-105 group">
+            <div class="aspect-video bg-gradient-to-br from-primary-500/20 to-primary-600/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-primary-400 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-primary-500/20 text-primary-300 px-3 py-1 rounded-full text-sm font-medium">AI Voice</span>
+                <span class="text-gray-400 text-sm">Commercial</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary-400 transition-colors duration-300">Radio Advertisement Campaign</h3>
+              <p class="text-gray-400 mb-4">Created compelling voiceovers for a national radio campaign with emotional depth and brand consistency.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">30 ads</span>
+                <button class="text-primary-400 hover:text-primary-300 font-semibold">Listen Sample</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Project 2 -->
+          <div class="portfolio-item image bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl overflow-hidden hover:border-accent-500/50 transition-all duration-500 transform hover:scale-105 group">
+            <div class="aspect-video bg-gradient-to-br from-accent-500/20 to-accent-600/20 flex items-center justify-center">
+              <svg class="w-16 h-16 text-accent-400 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+              </svg>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-accent-500/20 text-accent-300 px-3 py-1 rounded-full text-sm font-medium">AI Image</span>
+                <span class="text-gray-400 text-sm">Art</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors duration-300">Digital Art Collection</h3>
+              <p class="text-gray-400 mb-4">Designed a series of abstract digital artworks for a contemporary art gallery's virtual exhibition.</p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">25 artworks</span>
+                <button class="text-accent-400 hover:text-accent-300 font-semibold">View Gallery</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary-500/10 to-accent-500/10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+            Ready to Create
+          </span>
+          <br />
+          <span class="text-white">Your Next Project?</span>
+        </h2>
+        <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+          Join our portfolio of successful projects. Let's bring your vision to life with AI.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="/contact" class="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:from-primary-600 hover:to-accent-600 transition-all duration-300 transform hover:scale-105">
+            Start Your Project
+          </a>
+          <a href="/services" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-dark-900 transition-all duration-300">
+            View Services
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<script>
+  // Portfolio filtering
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        
+        // Update active button
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-gradient-to-r', 'from-primary-500', 'to-accent-500', 'text-white');
+          b.classList.add('bg-dark-800/50', 'text-gray-300');
+        });
+        
+        this.classList.add('active', 'bg-gradient-to-r', 'from-primary-500', 'to-accent-500', 'text-white');
+        this.classList.remove('bg-dark-800/50', 'text-gray-300');
+        
+        // Filter items
+        portfolioItems.forEach(item => {
+          if (filter === 'all' || item.classList.contains(filter)) {
+            item.style.display = 'block';
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+              item.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  });
+</script>

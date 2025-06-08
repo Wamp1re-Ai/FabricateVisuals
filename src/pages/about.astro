@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="About Us - FabricateVisuals" description="Learn about FabricateVisuals, our mission to democratize AI-powered content creation, and our team of experts.">
+  <Navigation />
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="py-20 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+          <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+            About
+          </span>
+          <br />
+          <span class="text-white">FabricateVisuals</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+          Pioneering the future of content creation through artificial intelligence
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-8">
+              <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+                Our Mission
+              </span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-6 leading-relaxed">
+              At FabricateVisuals, we believe that everyone should have access to professional-quality content creation tools. Our mission is to democratize AI-powered media generation, making it accessible, affordable, and incredibly powerful.
+            </p>
+            <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+              We're not just a service provider – we're your creative partners, helping you bring ideas to life with cutting-edge artificial intelligence technology that was once only available to large corporations.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-primary-400 mb-2">2024</div>
+                <div class="text-gray-400">Founded</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-accent-400 mb-2">500+</div>
+                <div class="text-gray-400">Projects Completed</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-dark-800/30 rounded-3xl p-8 border border-primary-500/20">
+            <h3 class="text-2xl font-bold text-white mb-6">Our Values</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center mr-4 mt-1">
+                  <svg class="w-6 h-6 text-primary-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-white mb-2">Excellence</h4>
+                  <p class="text-gray-400">We deliver nothing but the highest quality AI-generated content.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-accent-500/20 rounded-xl flex items-center justify-center mr-4 mt-1">
+                  <svg class="w-6 h-6 text-accent-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-white mb-2">Innovation</h4>
+                  <p class="text-gray-400">We stay at the forefront of AI technology and creative possibilities.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center mr-4 mt-1">
+                  <svg class="w-6 h-6 text-primary-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-4h2v4h2v2H4c-1.1 0-2-.9-2-2zm14 2v-2h2v-4h2v4c0 1.1-.9 2-2 2h-2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-lg font-semibold text-white mb-2">Accessibility</h4>
+                  <p class="text-gray-400">Making advanced AI tools available to creators of all sizes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-dark-800/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+              Meet Our Team
+            </span>
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            A diverse group of AI experts, creative professionals, and technology enthusiasts
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Team Member 1 -->
+          <div class="bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl p-8 text-center hover:border-primary-500/30 transition-all duration-300">
+            <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
+              A
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Alex Chen</h3>
+            <p class="text-primary-400 font-semibold mb-4">AI Research Lead</p>
+            <p class="text-gray-400 leading-relaxed">
+              PhD in Machine Learning with 8+ years in AI research. Specializes in neural voice synthesis and computer vision.
+            </p>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl p-8 text-center hover:border-accent-500/30 transition-all duration-300">
+            <div class="w-24 h-24 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
+              S
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Sarah Rodriguez</h3>
+            <p class="text-accent-400 font-semibold mb-4">Creative Director</p>
+            <p class="text-gray-400 leading-relaxed">
+              Award-winning creative with 10+ years in digital media. Bridges the gap between technology and artistic vision.
+            </p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="bg-dark-800/50 backdrop-blur-sm border border-dark-700/50 rounded-2xl p-8 text-center hover:border-primary-500/30 transition-all duration-300">
+            <div class="w-24 h-24 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
+              M
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Marcus Johnson</h3>
+            <p class="text-primary-400 font-semibold mb-4">Technical Lead</p>
+            <p class="text-gray-400 leading-relaxed">
+              Full-stack engineer with expertise in AI infrastructure and scalable systems. Ensures our platform runs smoothly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+              Our Technology
+            </span>
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Powered by the latest advances in artificial intelligence and machine learning
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Tech 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Neural Networks</h3>
+            <p class="text-gray-400 text-sm">Advanced deep learning models for content generation</p>
+          </div>
+
+          <!-- Tech 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Cloud Computing</h3>
+            <p class="text-gray-400 text-sm">Scalable infrastructure for high-performance processing</p>
+          </div>
+
+          <!-- Tech 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Real-time Processing</h3>
+            <p class="text-gray-400 text-sm">Instant generation and delivery of AI content</p>
+          </div>
+
+          <!-- Tech 4 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-primary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Quality Assurance</h3>
+            <p class="text-gray-400 text-sm">Automated quality checks and human oversight</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary-500/10 to-accent-500/10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+            Join Our Journey
+          </span>
+        </h2>
+        <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+          Be part of the AI revolution in content creation. Let's build the future together.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="/contact" class="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:from-primary-600 hover:to-accent-600 transition-all duration-300 transform hover:scale-105">
+            Work With Us
+          </a>
+          <a href="/portfolio" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-dark-900 transition-all duration-300">
+            See Our Work
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

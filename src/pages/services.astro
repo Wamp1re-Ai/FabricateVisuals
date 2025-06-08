@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="AI Services - FabricateVisuals" description="Explore our comprehensive AI services including voice generation, text-to-speech, image creation, and video production.">
+  <Navigation />
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="py-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+          <span class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+            AI Services
+          </span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          Comprehensive AI-powered solutions to transform your creative projects
+        </p>
+      </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- AI Voice Generation -->
+        <div class="mb-20">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div class="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-3xl flex items-center justify-center mb-8">
+                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <h2 class="text-4xl font-bold text-white mb-6">AI Voice Generation</h2>
+              <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                Create incredibly realistic, human-like voices using cutting-edge AI technology. Perfect for audiobooks, podcasts, commercials, and any content requiring professional voiceovers.
+              </p>
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center">
+                  <svg class="w-6 h-6 text-primary-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-300">100+ unique voice styles and accents</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-6 h-6 text-primary-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-300">Custom voice cloning from samples</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-6 h-6 text-primary-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-300">Emotion and tone control</span>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-6 h-6 text-primary-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="text-gray-300">Studio-quality audio output</span>
+                </div>
+              </div>
+              <div class="bg-dark-800/50 rounded-2xl p-6 border border-primary-500/20">
+                <h3 class="text-xl font-semibold text-white mb-4">Pricing</h3>
+                <div class="text-3xl font-bold text-primary-400 mb-2">Starting at $0.10/minute</div>
+                <p class="text-gray-400">Volume discounts available</p>
+              </div>
+            </div>
+            <div class="bg-dark-800/30 rounded-3xl p-8 border border-primary-500/20">
+              <h3 class="text-2xl font-bold text-white mb-6">Use Cases</h3>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center mr-4 mt-1">
+                    <svg class="w-6 h-6 text-primary-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Audiobooks & Podcasts</h4>
+                    <p class="text-gray-400">Create engaging narrations with consistent quality</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center mr-4 mt-1">
+                    <svg class="w-6 h-6 text-primary-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Commercial Voiceovers</h4>
+                    <p class="text-gray-400">Professional ads and promotional content</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div class="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center mr-4 mt-1">
+                    <svg class="w-6 h-6 text-primary-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-white mb-2">E-Learning Content</h4>
+                    <p class="text-gray-400">Educational materials and training videos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text-to-Speech -->
+        <div class="mb-20">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1 bg-dark-800/30 rounded-3xl p-8 border border-accent-500/20">
+              <h3 class="text-2xl font-bold text-white mb-6">Features</h3>
+              <div class="space-y-6">
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-accent-400 rounded-full mr-4"></div>
+                  <span class="text-gray-300">50+ languages and dialects</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-accent-400 rounded-full mr-4"></div>
+                  <span class="text-gray-300">Real-time processing</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-accent-400 rounded-full mr-4"></div>
+                  <span class="text-gray-300">SSML support for advanced control</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-accent-400 rounded-full mr-4"></div>
+                  <span class="text-gray-300">Multiple output formats</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-accent-400 rounded-full mr-4"></div>
+                  <span class="text-gray-300">API integration available</span>
+                </div>
+              </div>
+            </div>
+            <div class="order-1 lg:order-2">
+              <div class="w-20 h-20 bg-gradient-to-br from-accent-500 to-accent-600 rounded-3xl flex items-center justify-center mb-8">
+                <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+              </div>
+              <h2 class="text-4xl font-bold text-white mb-6">Text-to-Speech</h2>
+              <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                Transform any written content into natural-sounding speech with advanced AI technology. Support for multiple languages, emotions, and speaking styles.
+              </p>
+              <div class="bg-dark-800/50 rounded-2xl p-6 border border-accent-500/20">
+                <h3 class="text-xl font-semibold text-white mb-4">Pricing</h3>
+                <div class="text-3xl font-bold text-accent-400 mb-2">Starting at $0.05/minute</div>
+                <p class="text-gray-400">Free tier available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center bg-gradient-to-r from-primary-500/10 to-accent-500/10 rounded-3xl p-12">
+          <h2 class="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Transform your content creation process with our AI-powered services. Contact us for a custom quote.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="/contact" class="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-8 py-4 rounded-full text-lg font-bold hover:from-primary-600 hover:to-accent-600 transition-all duration-300 transform hover:scale-105">
+              Get Quote
+            </a>
+            <a href="/portfolio" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-dark-900 transition-all duration-300">
+              View Examples
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
