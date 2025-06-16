@@ -9,39 +9,46 @@ interface VideoItem {
   category: string;
 }
 
-// REPLACE THESE WITH YOUR ACTUAL GOOGLE DRIVE VIDEO IDs
-// See GOOGLE_DRIVE_SETUP.md for detailed instructions
+// Your actual Google Drive videos
 const videos: VideoItem[] = [
   {
     id: "1",
-    title: "AI Voice Synthesis Demo",
-    description: "Professional voice generation with emotional range and natural intonation",
-    thumbnail: "", // Will use gradient placeholder if empty
-    driveId: "YOUR_GOOGLE_DRIVE_VIDEO_ID_1", // Replace with actual Drive file ID from your folder
+    title: "AI Voice Synthesis Showcase",
+    description: "Professional voice generation with emotional range and natural intonation for various applications",
+    thumbnail: "", // Will use gradient placeholder
+    driveId: "1YN9MqfFk8bst4JOVlCJm2DELzaLrq45c",
     category: "voice"
   },
   {
     id: "2",
-    title: "Visual Creation Showcase",
-    description: "AI-generated imagery and artistic compositions for brands",
+    title: "Visual Creation Portfolio",
+    description: "AI-generated imagery and artistic compositions showcasing our visual creation capabilities",
     thumbnail: "",
-    driveId: "YOUR_GOOGLE_DRIVE_VIDEO_ID_2", // Replace with actual Drive file ID from your folder
+    driveId: "1ku1DW_C3wj0moLbsQy1KuxBRZmNQ5Cai",
     category: "visual"
   },
   {
     id: "3",
-    title: "Motion Graphics Portfolio",
-    description: "Dynamic animations and video production workflows",
+    title: "Motion Graphics Demo",
+    description: "Dynamic animations and video production workflows powered by AI technology",
     thumbnail: "",
-    driveId: "YOUR_GOOGLE_DRIVE_VIDEO_ID_3", // Replace with actual Drive file ID from your folder
+    driveId: "1CJAHcearPlDQM2MgStxp3tc4CHgiTjUR",
     category: "motion"
   },
   {
     id: "4",
-    title: "Custom AI Solutions",
-    description: "Enterprise implementations and bespoke integrations",
+    title: "Advanced AI Solutions",
+    description: "Enterprise-grade implementations and custom integrations for business applications",
     thumbnail: "",
-    driveId: "YOUR_GOOGLE_DRIVE_VIDEO_ID_4", // Replace with actual Drive file ID from your folder
+    driveId: "18jnkta2E5oBwN1qY30_bk15bbmdi-3bO",
+    category: "custom"
+  },
+  {
+    id: "5",
+    title: "Complete AI Workflow",
+    description: "End-to-end demonstration of our comprehensive AI-powered content creation process",
+    thumbnail: "",
+    driveId: "1UmngedbLmITvMv5kM0G82WoJi7-AzCCJ",
     category: "custom"
   }
 ];
@@ -79,7 +86,7 @@ const videos: VideoItem[] = [
     </div>
 
     <!-- Video Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 sm:gap-8">
       {videos.map((video) => (
         <div class={`video-item ${video.category} glass-effect rounded-2xl sm:rounded-3xl overflow-hidden hover-lift group cursor-pointer`} data-video-id={video.driveId} data-title={video.title}>
           <!-- Thumbnail -->
