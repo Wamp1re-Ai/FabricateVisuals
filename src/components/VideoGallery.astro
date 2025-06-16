@@ -1,0 +1,265 @@
+---
+// Video Gallery Component with Lightbox
+interface VideoItem {
+  id: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  driveId: string;
+  category: string;
+}
+
+// REPLACE THESE WITH YOUR ACTUAL GOOGLE DRIVE VIDEO IDs
+// See GOOGLE_DRIVE_SETUP.md for detailed instructions
+const videos: VideoItem[] = [
+  {
+    id: "1",
+    title: "AI Voice Synthesis Demo",
+    description: "Professional voice generation with emotional range and natural intonation",
+    thumbnail: "", // Will use gradient placeholder if empty
+    driveId: "YOUR_GOOGLE_DRIVE_VIDEO_ID_1", // Replace with actual Drive file ID from your folder
+    category: "voice"
+  },
+  {
+    id: "2",
+    title: "Visual Creation Showcase",
+    description: "AI-generated imagery and artistic compositions for brands",
+    thumbnail: "",
+    driveId: "YOUR_GOOGLE_DRIVE_VIDEO_ID_2", // Replace with actual Drive file ID from your folder
+    category: "visual"
+  },
+  {
+    id: "3",
+    title: "Motion Graphics Portfolio",
+    description: "Dynamic animations and video production workflows",
+    thumbnail: "",
+    driveId: "YOUR_GOOGLE_DRIVE_VIDEO_ID_3", // Replace with actual Drive file ID from your folder
+    category: "motion"
+  },
+  {
+    id: "4",
+    title: "Custom AI Solutions",
+    description: "Enterprise implementations and bespoke integrations",
+    thumbnail: "",
+    driveId: "YOUR_GOOGLE_DRIVE_VIDEO_ID_4", // Replace with actual Drive file ID from your folder
+    category: "custom"
+  }
+];
+---
+
+<section class="py-16 sm:py-24 lg:py-32 relative" id="video-gallery">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12 sm:mb-16 lg:mb-20">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4 sm:mb-6">
+        Our Work in Action
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto px-4">
+        See our AI-powered solutions in action through these showcase videos
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12">
+      <button class="filter-btn active bg-gradient-to-r from-primary-500 to-accent-500 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 min-h-[44px]" data-filter="all">
+        All Videos
+      </button>
+      <button class="filter-btn bg-gray-800/50 text-gray-300 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-primary-500/20 min-h-[44px]" data-filter="voice">
+        Voice AI
+      </button>
+      <button class="filter-btn bg-gray-800/50 text-gray-300 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-accent-500/20 min-h-[44px]" data-filter="visual">
+        Visual Creation
+      </button>
+      <button class="filter-btn bg-gray-800/50 text-gray-300 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-primary-500/20 min-h-[44px]" data-filter="motion">
+        Motion Graphics
+      </button>
+      <button class="filter-btn bg-gray-800/50 text-gray-300 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:bg-accent-500/20 min-h-[44px]" data-filter="custom">
+        Custom Solutions
+      </button>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {videos.map((video) => (
+        <div class={`video-item ${video.category} glass-effect rounded-2xl sm:rounded-3xl overflow-hidden hover-lift group cursor-pointer`} data-video-id={video.driveId} data-title={video.title}>
+          <!-- Thumbnail -->
+          <div class="relative aspect-video bg-gray-800 overflow-hidden">
+            {video.thumbnail ? (
+              <img
+                src={video.thumbnail}
+                alt={video.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            ) : (
+              <div class={`w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-500 ${
+                video.category === 'voice' ? 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20' :
+                video.category === 'visual' ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20' :
+                video.category === 'motion' ? 'bg-gradient-to-br from-blue-500/20 to-indigo-500/20' :
+                'bg-gradient-to-br from-emerald-500/20 to-teal-500/20'
+              }`}>
+                <svg class="w-16 h-16 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                </svg>
+              </div>
+            )}
+            <!-- Play Button Overlay -->
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <button class="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors duration-300 min-h-[44px] min-w-[44px]">
+                <svg class="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+            </div>
+            <!-- Category Badge -->
+            <div class="absolute top-4 left-4">
+              <span class="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                {video.category.charAt(0).toUpperCase() + video.category.slice(1)}
+              </span>
+            </div>
+          </div>
+          
+          <!-- Content -->
+          <div class="p-6">
+            <h3 class="text-xl font-display font-semibold text-white mb-2 group-hover:text-primary-400 transition-colors duration-300">
+              {video.title}
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              {video.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="video-lightbox" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="relative w-full max-w-6xl mx-auto">
+      <!-- Close Button -->
+      <button id="close-lightbox" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors duration-300 min-h-[44px] min-w-[44px] flex items-center justify-center">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      
+      <!-- Video Container -->
+      <div class="bg-gray-900 rounded-2xl overflow-hidden">
+        <div class="aspect-video">
+          <iframe 
+            id="lightbox-iframe"
+            src=""
+            class="w-full h-full"
+            frameborder="0"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+        </div>
+        
+        <!-- Video Info -->
+        <div class="p-6">
+          <h3 id="lightbox-title" class="text-2xl font-display font-bold text-white mb-2"></h3>
+          <p class="text-gray-400">Click outside or press ESC to close</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .video-item {
+    transition: all 0.3s ease;
+  }
+  
+  .video-item.hidden {
+    display: none;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+</style>
+
+<script>
+  // Filter functionality
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const videoItems = document.querySelectorAll('.video-item');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      
+      // Update active button
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'bg-gradient-to-r', 'from-primary-500', 'to-accent-500', 'text-white');
+        b.classList.add('bg-gray-800/50', 'text-gray-300');
+      });
+      
+      btn.classList.add('active', 'bg-gradient-to-r', 'from-primary-500', 'to-accent-500', 'text-white');
+      btn.classList.remove('bg-gray-800/50', 'text-gray-300');
+      
+      // Filter videos
+      videoItems.forEach(item => {
+        if (filter === 'all' || item.classList.contains(filter)) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    });
+  });
+  
+  // Lightbox functionality
+  const lightbox = document.getElementById('video-lightbox');
+  const lightboxIframe = document.getElementById('lightbox-iframe');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const closeLightbox = document.getElementById('close-lightbox');
+  
+  // Function to get Google Drive embed URL
+  function getGoogleDriveEmbedUrl(driveId) {
+    return `https://drive.google.com/file/d/${driveId}/preview`;
+  }
+  
+  // Open lightbox
+  videoItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const driveId = item.getAttribute('data-video-id');
+      const title = item.getAttribute('data-title');
+      
+      lightboxIframe.src = getGoogleDriveEmbedUrl(driveId);
+      lightboxTitle.textContent = title;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  
+  // Close lightbox
+  function closeLightboxModal() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    lightboxIframe.src = '';
+    document.body.style.overflow = 'auto';
+  }
+  
+  closeLightbox.addEventListener('click', closeLightboxModal);
+  
+  // Close on background click
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      closeLightboxModal();
+    }
+  });
+  
+  // Close on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+      closeLightboxModal();
+    }
+  });
+</script>
