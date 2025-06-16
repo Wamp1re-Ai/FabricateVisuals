@@ -13,7 +13,11 @@ const { title, description = "Fabricate Visuals - Premium AI Services for Voice,
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
@@ -43,9 +47,9 @@ const { title, description = "Fabricate Visuals - Premium AI Services for Voice,
     <div class="fixed inset-0 z-0">
       <div class="absolute inset-0 bg-gray-950"></div>
       <div class="absolute inset-0" style="background: radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(217, 70, 239, 0.05) 0%, transparent 50%);"></div>
-      <div class="absolute inset-0 opacity-40">
-        <div class="absolute top-20 left-20 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div class="absolute bottom-20 right-20 w-96 h-96 bg-purple-500/8 rounded-full blur-3xl animate-pulse" style="animation-delay: 3s;"></div>
+      <div class="absolute inset-0 opacity-30 sm:opacity-40">
+        <div class="absolute top-10 sm:top-20 left-10 sm:left-20 w-48 sm:w-72 h-48 sm:h-72 bg-indigo-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-64 sm:w-96 h-64 sm:h-96 bg-purple-500/8 rounded-full blur-3xl animate-pulse" style="animation-delay: 3s;"></div>
       </div>
     </div>
 
